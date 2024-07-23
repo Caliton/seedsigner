@@ -124,7 +124,7 @@ class SettingsConstants:
         (CUSTOM_DERIVATION, "Custom Derivation"),
     ]
 
-    WORDLIST_LANGUAGE__ENGLISH = "en"
+    WORDLIST_LANGUAGE__ENGLISH = "pt"
     WORDLIST_LANGUAGE__CHINESE_SIMPLIFIED = "zh_Hans_CN"
     WORDLIST_LANGUAGE__CHINESE_TRADITIONAL = "zh_Hant_TW"
     WORDLIST_LANGUAGE__FRENCH = "fr"
@@ -133,7 +133,7 @@ class SettingsConstants:
     WORDLIST_LANGUAGE__KOREAN = "kr"
     WORDLIST_LANGUAGE__PORTUGUESE = "pt"
     ALL_WORDLIST_LANGUAGES = [
-        (WORDLIST_LANGUAGE__ENGLISH, "English"),
+        (WORDLIST_LANGUAGE__ENGLISH, "Português"),
         # (WORDLIST_LANGUAGE__CHINESE_SIMPLIFIED, "简体中文"),
         # (WORDLIST_LANGUAGE__CHINESE_TRADITIONAL, "繁體中文"),
         # (WORDLIST_LANGUAGE__FRENCH, "Français"),
