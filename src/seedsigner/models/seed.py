@@ -8,6 +8,7 @@ from embit import bip39, bip32, bip85
 from embit.networks import NETWORKS
 from typing import List
 
+from seedsigner.models.bip39_portuguese import BIP39_PORTUGUESE_WORDLIST
 from seedsigner.models.settings import SettingsConstants
 
 logger = logging.getLogger(__name__)
@@ -40,7 +41,7 @@ class Seed:
     def get_wordlist(wordlist_language_code: str = SettingsConstants.WORDLIST_LANGUAGE__ENGLISH) -> List[str]:
         # TODO: Support other BIP-39 wordlist languages!
         if wordlist_language_code == SettingsConstants.WORDLIST_LANGUAGE__ENGLISH:
-            return bip39.WORDLIST
+            return BIP39_PORTUGUESE_WORDLIST
         else:
             raise Exception(f"Unrecognized wordlist_language_code {wordlist_language_code}")
 

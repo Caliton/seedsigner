@@ -25,6 +25,7 @@ from seedsigner.models.settings import Settings, SettingsConstants
 from seedsigner.models.settings_definition import SettingsDefinition
 from seedsigner.models.threads import BaseThread, ThreadsafeCounter
 from seedsigner.views.view import NotYetImplementedView, OptionDisabledView, View, Destination, BackStackView, MainMenuView
+from seedsigner.models.bip39_portuguese import BIP39_PORTUGUESE_WORDLIST
 
 logger = logging.getLogger(__name__)
 
@@ -1255,9 +1256,9 @@ class SeedWordsBackupTestView(View):
                 self.cur_index = int(random.random() * len(self.mnemonic_list))
 
         real_word = self.mnemonic_list[self.cur_index]
-        fake_word1 = bip39.WORDLIST[int(random.random() * 2047)]
-        fake_word2 = bip39.WORDLIST[int(random.random() * 2047)]
-        fake_word3 = bip39.WORDLIST[int(random.random() * 2047)]
+        fake_word1 = BIP39_PORTUGUESE_WORDLIST[int(random.random() * 2047)]
+        fake_word2 = BIP39_PORTUGUESE_WORDLIST[int(random.random() * 2047)]
+        fake_word3 = BIP39_PORTUGUESE_WORDLIST[int(random.random() * 2047)]
 
         button_data = [real_word, fake_word1, fake_word2, fake_word3]
         random.shuffle(button_data)
