@@ -791,7 +791,7 @@ class SeedQrDecoder(BaseSingleFrameQrDecoder):
 
         if qr_type == QRType.SEED__COMPACTSEEDQR:
             try:
-                self.seed_phrase = bip39.mnemonic_from_bytes(segment).split()
+                self.seed_phrase = bip39.mnemonic_from_bytes(segment, wordlist=Seed.get_wordlist()).split()
                 self.complete = True
                 self.collected_segments = 1
                 return DecodeQRStatus.COMPLETE

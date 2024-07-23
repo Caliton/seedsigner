@@ -10,7 +10,7 @@ from seedsigner.models.seed import Seed
 
 def run_encode_decode_test(entropy: bytes, mnemonic_length, qr_type):
     """ Helper method to re-run multiple variations of the same encode/decode test """
-    mnemonic = bip39.mnemonic_from_bytes(entropy).split()
+    mnemonic = bip39.mnemonic_from_bytes(entropy, wordlist=Seed.get_wordlist()).split()
     assert len(mnemonic) == mnemonic_length
 
     if qr_type == QRType.SEED__SEEDQR:
